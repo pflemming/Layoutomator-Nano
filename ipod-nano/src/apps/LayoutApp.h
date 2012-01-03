@@ -9,6 +9,7 @@ namespace ipn
     class TextWidget;
     class ScalableButtonWidget;
     class MarkingMenu;
+    class TitleBarWidget;
 
     class LayoutApp : public App
         {
@@ -29,6 +30,7 @@ namespace ipn
                 ScalableButtonWidget *m_quitButton, *m_someButton;
                 MarkingMenu *m_markingMenu;
                 QTimer *m_menuInvokeTimer;
+                TextWidget *m_message;
 
              protected:
                 virtual void mousePressEvent(QMouseEvent *event);

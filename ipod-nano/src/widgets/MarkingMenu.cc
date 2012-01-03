@@ -16,7 +16,7 @@ namespace ipn
 		m_activeEntryId = -1;
 
 		// Set the default active background color:
-		m_activeColor = QColor(0, 224, 0);
+                m_activeColor = QColor(0, 111, 224);
 	}
 
 	void MarkingMenu::paintEvent(QPaintEvent*)

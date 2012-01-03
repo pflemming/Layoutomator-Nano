@@ -15,11 +15,6 @@ LayoutApp::LayoutApp(QWidget *parent) : App(parent)
     m_back->setColor(BackgroundWidget::BG_WHITE);
     m_back->move(0, 0);
 
-    m_titleBar = new TitleBarWidget(this);
-    m_titleBar->setTitle("Simple GUI");
-    m_titleBar->move(0, 0);
-    m_titleBar->addButton(TitleBarWidget::BUTTON_BACK);
-
     //some message
 
     m_message = new TextWidget(this);
@@ -33,7 +28,7 @@ LayoutApp::LayoutApp(QWidget *parent) : App(parent)
     m_quitButton->move(148, 184);
     m_quitButton->resize(80, 48);
     m_quitButton->setImage(":/img/buttons/default");
-    m_quitButton->setText("exit");
+    m_quitButton->setText("quit");
     connect(m_quitButton, SIGNAL(clicked()), this, SIGNAL(quitButtonClicked()));
 
     //some Button:
@@ -42,7 +37,7 @@ LayoutApp::LayoutApp(QWidget *parent) : App(parent)
     m_someButton->move(2, 2);
     m_someButton->resize(136, 48);
     m_someButton->setImage(":/img/buttons/default");
-    m_someButton->setText("invoke menu");
+    m_someButton->setText("menu");
  //   connect(m_someButton, SIGNAL(clicked()), );
 
     //Marking Menu:
@@ -52,7 +47,7 @@ LayoutApp::LayoutApp(QWidget *parent) : App(parent)
     m_markingMenu->addEntry("Columns", Qt::white, Qt::black);
     m_markingMenu->addEntry("Date", Qt::gray, Qt::white);
     m_markingMenu->addEntry("Author", Qt::white, Qt::black);
-    m_markingMenu->addEntry("Overview", Qt::gray, Qt::white);
+    m_markingMenu->addEntry("Over-\nview", Qt::gray, Qt::white);
 
     m_menuInvokeTimer = new QTimer(this);
     m_menuInvokeTimer->setInterval(500);
@@ -75,7 +70,7 @@ LayoutApp::LayoutApp(QWidget *parent) : App(parent)
             update();
     }
 
-    void MarkingMenuApp::handleMenuClick(QString entryText)
+    void LayoutApp::handleMenuClick(QString entryText)
     {
             m_markingMenu->hide();
             m_message->setText(entryText);
