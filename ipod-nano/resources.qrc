@@ -58,5 +58,6 @@
         <file>img/page_indicator/page_indicator_active.png</file>
         <file>img/page_indicator/page_indicator_inactive.png</file>
         <file>img/fingers/index_finger.png</file>
+        <file>img/buttons/minusButton.png</file>
     </qresource>
 </RCC>

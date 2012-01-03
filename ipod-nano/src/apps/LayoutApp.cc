@@ -12,7 +12,7 @@ namespace ipn
 LayoutApp::LayoutApp(QWidget *parent) : App(parent)
 {
     m_back = new BackgroundWidget(this);
-    m_back->setColor(BackgroundWidget::BG_WHITE);
+    m_back->setColor(BackgroundWidget::BG_GRAY);
     m_back->move(0, 0);
 
     //some message
@@ -34,10 +34,10 @@ LayoutApp::LayoutApp(QWidget *parent) : App(parent)
     //some Button:
 
     m_someButton = new ScalableButtonWidget(this);
-    m_someButton->move(2, 2);
-    m_someButton->resize(136, 48);
-    m_someButton->setImage(":/img/buttons/default");
-    m_someButton->setText("menu");
+    m_someButton->move(40, 110);
+    m_someButton->resize(48, 48);
+    m_someButton->setImage(":/img/buttons/minusButton");
+//    m_someButton->setText("menu");
  //   connect(m_someButton, SIGNAL(clicked()), );
 
     //Marking Menu:
