@@ -24,7 +24,7 @@ namespace ipn
 		m_quitButton->move(148, 184);
 		m_quitButton->resize(80, 48);
 		m_quitButton->setImage(":/img/buttons/default");
-		m_quitButton->setText("exit");
+                m_quitButton->setText("exit");
 		connect(m_quitButton, SIGNAL(clicked()), this, SIGNAL(quitButtonClicked()));
 
 		m_menuButton = new ScalableButtonWidget(this);

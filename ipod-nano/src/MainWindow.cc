@@ -98,7 +98,7 @@ namespace ipn
 		connect(m_overlayWidget, SIGNAL(mouseReleased(QMouseEvent*)), this, SLOT(handleMouseRelease(QMouseEvent*)));
 		connect(m_overlayWidget, SIGNAL(mouseMoved(QMouseEvent*)), this, SLOT(handleMouseMove(QMouseEvent*)));
 		connect(m_overlayWidget, SIGNAL(mouseHovered(QMouseEvent*)), this, SLOT(handleMouseHover(QMouseEvent*)));
-		connect(m_overlayWidget, SIGNAL(gestureTriggered(GestureType,qreal)), this, SLOT(handleGesture(GestureType,qreal)));
+                connect(m_overlayWidget, SIGNAL(gestureTriggered(GestureType,qreal)), this, SLOT(handleGesture(GestureType,qreal)));
 
 		// Wire up menus <-> menus:
 		connect(m_menuApp, SIGNAL(topLeftButtonClicked()), this, SLOT(switchToDisplayMenuApp()));
@@ -139,7 +139,7 @@ namespace ipn
 		connect(m_peepholeApp, SIGNAL(swipeRightTriggered()), m_frameWidget, SLOT(popApp()));
 		connect(m_gestureApp, SIGNAL(quitButtonClicked()), m_frameWidget, SLOT(popApp()));
                 connect(m_layoutApp, SIGNAL(quitButtonClicked()), m_frameWidget, SLOT(popApp()));
-		connect(m_paintApp, SIGNAL(swipeRightTriggered()), m_frameWidget, SLOT(popApp()));
+                connect(m_paintApp, SIGNAL(swipeRightTriggered()), m_frameWidget, SLOT(popApp()));
 		connect(m_musicApp, SIGNAL(swipeRightTriggered()), m_frameWidget, SLOT(popApp()));
 		connect(m_pickerApp->titleBar(), SIGNAL(rightButtonClicked()), m_frameWidget, SLOT(popApp()));
 		connect(m_multiTapApp, SIGNAL(accepted()), m_frameWidget, SLOT(popApp()));
